@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/styles/login.css">
+  <title>Login</title>
+  <link href="/bootstrap-5.0.1-dist/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="/bootstrap-5.0.1-dist/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <form class="login" method="POST" action="/login">
+      <p class="title">Log in</p>
+      <input type="text" placeholder="Username" name="username" autofocus />
+      <i class="fa fa-user"></i>
+      <input type="password" name="password" placeholder="Password" />
+      <i class="fa fa-key"></i>
+      <a href="/signup">Forgot your password?</a>
+      <input class="btn btn-dark" data-mdb-ripple-color="dark" type="submit">
+      </input>
+    </form>
+    <footer><a target="blank" href="/">home</a></footer>
+    </p>
+  </div>
+
+</body>
+
+</html>

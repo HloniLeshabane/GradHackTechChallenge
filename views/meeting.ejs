@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Meeting</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="sidebar-02/https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../sidebar-02/css/style.css">
+    <link rel="stylesheet" href="../../styles/map.css">
+    <link rel="stylesheet" href="/node_modules/sweetalert2/dist/sweetalert2.css">
+</head>
+
+<body>
+
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="custom-menu">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                    <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle Menu</span>
+                </button>
+            </div>
+            <div class="p-4 pt-5">
+                <h1><a href="index.html" class="logo">Meet your buddies</a></h1>
+                <ul class="list-unstyled components mb-5">
+                    <li>
+                        <a href="#" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <% people.forEach(person=>{ %>
+                                <li>
+                                    <a href="#">
+                                        <%= person.Address %>
+                                    </a>
+                                </li>
+                                <%}) %>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
+                            class="dropdown-toggle">Participants</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <% people.forEach(person=>{ %>
+                                <li>
+                                    <a href="#">
+                                        <%= person.Firstname %>
+                                            <%= person.LastName %>
+                                    </a>
+                                </li>
+                                <%}) %>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">My Profile</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="con mb-5">
+                    <h3 class="h6">Enter the location to meet</h3>
+                    <form class="form colorlib-subscribe-form" action="/meeting" method="POST">
+                        <div class="form-group d-flex">
+                            <div class="icon"><span class="icon-paper-plane"></span></div>
+                            <input type="text" name="address" id="address_field" class="form-control"
+                                placeholder="Enter Address">
+                            <div>
+                                <button type="submit" id="findbtn" class="btn btn-outline-light">Find</button>
+                            </div>
+
+                        </div>
+                        
+                    </form>
+                    <div>
+                        <button id="meetingOverbtn" onclick="watchLiveLocation()" class="btn btn-outline-light">Meeting Over</button>
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <p>
+                        FundaNami &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved |
+                    </p>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5 pt-5">
+
+            <h2 class="title mb-4">Meet here</h2>
+            <p>The locations of your fellows are shown on the right.</p>
+            <p>The app has calculated a suitable place to meet based on the resgistered addresses shown as <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+            </svg>
+            </p> 
+            <p>If you dont like the suggested meet-up region you can suggest by searching on the left panel</p>
+            <p id="suggestion"></p>
+            <p id="distances"></p>
+
+        </div>
+
+        <div id="map">
+
+        </div>
+
+
+    </div>
+
+    <script src="/sidebar-02/js/jquery.min.js"></script>
+    <script src="/sidebar-02/js/popper.js"></script>
+    <script src="/sidebar-02/js/bootstrap.min.js"></script>
+    <script src="/sidebar-02/js/main.js"></script>
+    <script>
+        var group_name = '<%- JSON.stringify(groupname) %>'; // test is now a valid js object
+    </script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUQnm5UUquBDBn1LMU7k94sIazr4yqVCs&callback=initMap"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/maps.js"></script>
+    <script src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+</body>
+
+</html>

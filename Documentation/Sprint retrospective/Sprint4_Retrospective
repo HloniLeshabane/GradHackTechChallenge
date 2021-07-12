@@ -1,0 +1,29 @@
+#### Preparation:
+- Participants:
+- Team members: @Mukz98 @ @Allen1412 @ThandekaMazibuko @HloniLeshabane 
+
+#### Scrum master: @Allen1412 for group -011
+
+#### Sprint goal
+-The goal for this week is to create functionality for users to meet using live maps. 
+
+
+#### Duration of Sprint: 1 week (7 days)
+
+#### Moderation
+
+The web app now has a more face-to-face meeting functionality. The chatroom is functional with messages being stored in an sql database. 
+The testing of the database functions have not been implemented yet because of the difficulty in mocking and closing the database connection as Jest 
+throws a timeout error and a connection error. Some major user stories have been carried over to the next sprint due to difficulty in modeling
+some situations as set forth in the brief in the web app.
+
+#### Goal: 
+The next sprint will see fully featured map integration. A comprehensive testing of database functionality. The delayed/in-progress user stories
+that have not been completed will be finished along with the upcoming user stories. 
+
+#### Velocity and Business Value for sprint
+
+- Points for 9 user stories: 55
+- Points for un-completed user stories: 28
+
+                                #### Achieved Velocity for Sprint 1: 55 - 28 = 27

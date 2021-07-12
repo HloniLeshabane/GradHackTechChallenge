@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/signup.css">
+    <title>Funda Nami Login</title>
+    <link href="/bootstrap-5.0.1-dist/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="/bootstrap-5.0.1-dist/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="user">
+        <header class="user__header">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg" alt="" />
+            <h1 class="user__title">You're seconds away from having study buddies!</h1>
+        </header>
+
+        <form class="form" method="POST" action="/signup">
+            <div class="form__group">
+                <input type="text" placeholder="Username" id="username" name="username" class="form__input" />
+            </div>
+
+            <div class="form__group">
+                <input type="email" placeholder="Email" id="email" name="email" class="form__input" />
+            </div>
+
+            <div class="form__group">
+                <input type="password" placeholder="Password" id="password" name="password" class="form__input" />
+            </div>
+
+            <div class="form__group">
+                <input type="password" placeholder="Confirm Password" id="confirm_password" class="form__input" />
+            </div>
+
+            <div class="form__group">
+                <input type="text" placeholder="First Name" id="firstname" name="firstname" class="form__input" />
+            </div>
+
+            <div class="form__group">
+                <input type="text" placeholder="Last Name" id="lastname" name="lastname" class="form__input" />
+            </div>
+
+            <div class="form__group">
+                <input type="text" placeholder="Address(optional)" id="address" name="address" class="form__input" />
+            </div>
+
+            <input class="btn btn-outline-light btn-rounded" data-mdb-ripple-color="dark" type="submit">
+            </input>
+
+        </form>
+    </div>
+
+</body>
+
+
+
+</html>

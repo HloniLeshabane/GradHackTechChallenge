@@ -1,0 +1,22 @@
+body {
+    background-color: #eee
+}
+
+.card {
+	/*display: inline-block;*/
+    border: none
+}
+
+.btn-outline-dark {
+    border-radius: 35px;
+    font-size: 10px;
+    box-shadow: none
+}
+.checked {
+    display: inline-flex;
+    color: orange;
+  }
+.col-md-3 {
+	
+    margin-top: 5px
+}

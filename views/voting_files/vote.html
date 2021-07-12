@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/bootstrap-5.0.1-dist/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="/bootstrap-5.0.1-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <link rel="stylesheet" href="/styles/voting.css">
+ 
+    <title>Voting_system</title>
+</head>
+<body>
+
+    <div class="container"> 
+        <h1>Poll</h1>
+        <div class="parent-container d-flex">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <p>Do you want Mukz to stay in the group?</p>
+                        <form id="vote-form">
+                            <p>
+                                <input  type="radio" name="vot" id="yes" value="Yes"> 
+                                <label for="yes">Yes</label>
+                            </p>
+                            <p>
+                                <input type="radio" name="vot" id="no" value="No">
+                                <label for="no">No</label>
+                            </p>
+                            <input id = "done_voting" type="submit" value="Vote" name="vote_button" class="btn">
+
+
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="container">
+
+                <div class="row titled">
+                    <div id="hide">
+                        <p>Voting time left</p>
+                    </div>
+                    <div class="col countdown">
+                        <div class="container-day">
+                            <h4 class="day">Time</h4>
+                            <h6>Days</h6>
+                        </div>
+                        <div class="container-hour">
+                            <h4 class="hour">Time</h4>
+                            <h6>Hours</h6>
+                        </div>
+                        <div class="container-minute">
+                            <h4 class="minute">Time</h4>
+                            <h6>Minutes</h6>
+                        </div>
+                        <div class="container-second">
+                            <h4 class="second">Time</h4>
+                            <h6>Seconds</h6>
+                        </div>
+                    </div>
+
+                    
+                </div>
+                
+            </div>
+        </div>
+  
+        <br> <br>
+
+        <div id="chartContainer" style="height: 300x;width: 100%;"></div>
+    </div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pusher/7.0.3/pusher.min.js" integrity="sha512-XVnzJolpkbYuMeISFQk6sQIkn3iYUbMX3f0STFUvT6f4+MZR6RJvlM5JFA2ritAN3hn+C0Bkckx2/+lCoJl3yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js" integrity="sha512-FJ2OYvUIXUqCcPf1stu+oTBlhn54W0UisZB/TNrZaVMHHhYvLBV9jMbvJYtvDe5x/WVaoXZ6KB+Uqe5hT2vlyA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/cdn/scripts/Votes/voting.js"></script> 
+</body>
+</html>

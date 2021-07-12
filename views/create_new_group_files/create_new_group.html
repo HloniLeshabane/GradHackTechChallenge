@@ -1,0 +1,59 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Create new group</title>
+</head>
+    
+<body>
+    
+  <form action="/create_new_group" method="POST" class="container">
+    <h1>Create new group</h1>
+
+    <div>
+        <input name = 'groupName' type="text"  placeholder="Group name">
+    </div>
+
+    <div>
+      <input name = 'groupDescription' type="text"  placeholder="Group description">
+  </div>
+
+  <div>
+    <input name = 'groupTheme' type="text"  placeholder="Group theme">
+</div>
+
+    <button type="submit" onclick="alert()" >create</button>
+  </form>
+
+  <script>
+
+    function alert(){
+
+      Swal.fire({
+  title: 'Are you sure?',
+  text: "You won't be able to revert this!",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Yes, delete it!'
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire(
+      'Deleted!',
+      'Your file has been deleted.',
+      'success'
+    )
+  }
+})
+
+    }
+
+
+  </script>
+
+  </body>
+</html>

@@ -1,0 +1,113 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    margin-top: 15px;
+}
+.wrapper ul{
+    list-style: none;
+    float: left;
+}
+.wrapper ul a{
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 32px;
+    padding: 0px 15px;
+}
+.wrapper ul li{
+    position:relative;
+    float: left;
+
+}
+.wrapper ul li:hover{
+    background: #f6f6f6;
+}
+.wrapper ul ul{
+    display: none;
+    position: relative;
+}
+.wrapper ul ul li{
+    width: 150px;
+  
+}
+.wrapper ul ul a{
+   line-height: 120%;
+   padding: 10px 15px;
+  
+}
+.wrapper ul li:hover > ul{
+  display: block;
+   
+ }
+
+.chat_header{
+ width: 100%;
+ background: white;
+ padding: 5px;
+ border-bottom: 1px solid #ddd;
+
+}
+
+.chatcontainer
+.chat_header h3{
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    color: #333;
+}
+
+.chatcontainer
+.messages{
+height: 420px;
+border-bottom: 1px solid #ddd;
+overflow-y: scroll;
+}
+
+.chatcontainer
+.bottom form input[type='submit']{
+    padding: 6px;
+    background: white;
+    border: 1px solid #ddd;
+    cursor: pointer;
+
+
+}
+
+.chatcontainer
+.bottom form input[type='text']{
+    width: 85%;
+    padding: 3px;
+    padding-left: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 5px;
+    height: 30px;
+
+
+}
+
+.sentmsg_class
+{
+    padding: 15px 45px;
+    background-color: #009688;
+    color: #ffffff;
+    border:5px white solid;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+

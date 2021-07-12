@@ -1,0 +1,28 @@
+#### Preparation:
+- Participants:
+- Team members: @Mukz98 @ @Allen1412 @ThandekaMazibuko @HloniLeshabane 
+
+#### Scrum master: @Mukz98 for group -011
+
+#### Sprint goal
+- Laying down the infrastructure for the application and initiating of the tasks for the main usestories.
+
+
+
+#### Duration of Sprint: 1 week (7days)
+
+#### Moderation
+
+The app has partial UI but it is not yet interactive. The group UI card is not well designed and this should be fixed on the following sprints. The implementation of the date and signature option on the screening questions is yet to be added on upcoming. 
+Bootstrap was also not responsive for all screen sizes. The task of deploying Travis CI on Azure will be completed in the text sprint. Most commits made are large.
+
+
+#### Goal: 
+Implement the UI for various routes and also the email system in Sprint 2 and try to make small commits.
+
+#### Velocity and Business Value for sprint
+
+- Points for 9 user stories: 27
+-Points for  un-completed user stories: 3
+
+                                #### Achieved Velocity for Sprint 1: 27 - 3 = 24

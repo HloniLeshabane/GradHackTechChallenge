@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>New Meeting</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/create_new_meeting.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.css">
+    <link rel="stylesheet"
+        href="sidebar-02/https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../sidebar-02/css/style.css">
+    <link rel="stylesheet" href="../../styles/map.css">
+    <link rel="stylesheet" href="/node_modules/sweetalert2/dist/sweetalert2.css">
+
+</head>
+
+<body>
+
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="custom-menu">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                    <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle Menu</span>
+                </button>
+            </div>
+            <div class="p-4 pt-5">
+                <h1><a href="index.html" class="logo">Schedule a meeting</a></h1>
+                <ul class="list-unstyled components mb-5">
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"
+                            class="dropdown-toggle">Home</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li>
+                                <a href="#">Address 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Address 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Address 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
+                            class="dropdown-toggle">Groups</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="#">Person 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Person 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Person 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#">Create Group</a>
+                    </li>
+                </ul>
+
+                <div class="con mb-5">
+                    <h3 class="h6">Enter the location to meet</h3>
+                    <form class="form colorlib-subscribe-form" action="/meeting" method="POST">
+                        <div class="form-group d-flex">
+                            <div class="icon"><span class="icon-paper-plane"></span></div>
+                            <input type="text" name="address" id="address" class="form-control"
+                                placeholder="Enter Address">
+                            <div>
+                                <button type="submit" class="btn btn-outline-light">Find</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="footer">
+                    <p>
+                        FundaNami &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved |
+                    </p>
+                </div>
+
+            </div>
+        </nav>
+
+        <h3 class="title">Select Date for Meeting</h3>
+                <div class='col-sm-6'>
+                    <div class="form-group">
+                       <div class='input-group date' id='datetimepicker5'>
+                          <input type='text' class=" form-control" />
+                          <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                          </span>
+                       </div>
+                    </div>
+                 </div>
+
+        <div class="wrapper">
+            <form class="login">
+
+                <h3 class="title">Select Date for Meeting</h3>
+                <input type="text" placeholder="yy-mm-dd" class="form-control" id="picker"
+                    data-provide="datepicker"></input>
+                <h3 class="title">Select Group to create meeting for:</h3>
+                <select class="form-select form-select-lg mb-3" id="groupname" aria-label=".form-select-lg example">
+                    <% groups.forEach(group=>{ %>
+                        <option value=<%=group.GroupName%>>
+                            <%=group.GroupName%>
+                        </option>
+                        <%}) %>
+                </select>
+
+                <h3 class="title">Write Agenda for Meeting</h3>
+                <input type="text" placeholder="Agenda of meeting" id="Agenda" name="agenda"></input>
+                <i class="fa fa-user"></i>
+                <input type="text" name="password" id="Duration" placeholder="Duration"></input>
+                <i class="fa fa-key"></i>
+                <a href="/dashboard">View upcoming meeting?</a>
+                <button class="btn btn-primary" id="btnNavbarSearch" type="button">Create</button>
+            </form>
+
+            </p>
+        </div>
+
+
+
+    </div>
+    <script src="/sidebar-02/js/jquery.min.js"></script>
+    <script src="/sidebar-02/js/popper.js"></script>
+    <script src="/sidebar-02/js/bootstrap.min.js"></script>
+    <script src="/sidebar-02/js/main.js"></script>
+    <script src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/public/newMeeting/newMeeting.js"></script>
+    <script>
+        $('#picker').datetimepicker({
+            timepicker: true,
+            datepicker: true,
+            format: 'y-m-d H:i',
+            value: '2021-8-6 08:00',
+            hours12: false,
+            step: 30,
+            yearStart: 2020,
+            yearEnd: 2040
+
+        })
+    </script>
+
+
+</body>
+
+</html>

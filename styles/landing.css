@@ -1,0 +1,18 @@
+
+
+.gradient{
+background: rgb(220,220,214);
+background: linear-gradient(90deg, rgba(220,220,214,1) 0%, rgba(93,150,198,1) 40%, rgba(116,78,255,1) 100%);
+
+}
+
+img {
+    width: 65%;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+}
+  

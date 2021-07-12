@@ -1,0 +1,27 @@
+#### Preparation:
+- Participants:
+- Team members: @Mukz98 @ @Allen1412 @ThandekaMazibuko @HloniLeshabane 
+
+#### Scrum master: @HloniLeshabane for group -011
+
+#### Sprint goal
+-The goal for this week is to make login sessions using cookies to protect certain routes. Integrating maps into the web app. 
+
+
+#### Duration of Sprint: 1 week (7 days)
+
+#### Moderation
+
+The web app now has a more secure login system. The passwords are now hashed before storing in the sql database. The testing of the database functions have not been implemented because of the difficulty in mocking and closing the database connection as Jest throws 
+a timeout error and a connection error. An algorithm is implemented for the covid screening to determine whether a person is eligible for meeting in person. Google Oauth2 has been partially implemented thus will be moved to the next sprint. Emailing client will be switched to
+outlook as gmail has too many security checks. Online voting system has not been implemented fully and will be carried over to the next sprint.
+
+#### Goal: 
+The next sprint will see more feature integration. A more secure login implementation that uses google oauth and tokens. Users should be able to see real time location.
+
+#### Velocity and Business Value for sprint
+
+- Points for 9 user stories: 55
+- Points for un-completed user stories: 11
+
+                                #### Achieved Velocity for Sprint 1: 55 - 11 = 44

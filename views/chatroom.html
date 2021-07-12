@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap-5.0.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/chatroom.css">
+    <script src="http://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src = "/cdn/scripts/chatroom/chatroom.js" ></script>
+    <title>Chatroom</title>
+</head>
+<body>
+
+
+   <div class='chat_header'>
+      <h3>Welcome to the chatroom</h3>
+ </div>
+   <nav class = "wrapper">
+      <ul>
+       <li><a href="#">active members</a>
+          <ul>
+             <li><a href="#">Mukz</a></li>
+          </ul>
+       </li>
+      </ul>
+
+      </nav>
+<div class='chatcontainer'>
+
+ 
+
+
+
+ 
+ 
+
+ <div class='messages' id='chats'>
+
+ </div>
+ <div class='bottom'>
+    <form action='/chatroom/send' method="POST"  id='chatform'>
+       <input type='hidden' id='name' value='Mukz'/>
+       <input type='text' id='text1' name='text' value='' placeholder='type your message'/>
+       <input type='submit' id='submit' name='submit' value='send'/>
+
+    </form>
+ </div>
+  
+ 
+
+
+</div>
+
+
+</body>
+
+<script src = "/js/activeMembers.js" ></script>
+</html>

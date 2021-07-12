@@ -1,0 +1,228 @@
+<!DOCTYPE >
+<html lang="en"    xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap-5.0.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/dashboard.css">
+    <link rel="stylesheet" href="/styles/peach.css"  />
+    <link rel="stylesheet" href="/styles/chatroom.css"  />
+    <script src = "/cdn/scripts/chatroom/chatroom.js" ></script>
+    <script src = "/cdn/scripts/joinGroup/application.js" ></script>
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <link href="styles/dashboard.css" rel="stylesheet" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body class="sb-nav-fixed">
+
+  <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+    <!-- Navbar Brand-->
+    <a class="navbar-brand ps-3" href="/dashboard">FundaNami</a>
+    <!-- Sidebar Toggle-->
+    <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+    <!-- Navbar Search-->
+    <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+        <div class="input-group">
+            <input class="form-control" id="search_for" name="search_word" type="text" placeholder="Search for people" aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+            
+            
+              <button class="btn btn-primary" id="btnNavbarSearch" onclick="searchFor()" type="button"><i class="fas fa-search"></i></button>
+            
+            
+        </div>
+    </form>
+    <!-- Navbar-->
+    <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#!">Settings</a></li>
+                <li><a class="dropdown-item" href="/views/activity_log.html">Activity Log</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#!">Logout</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<div id="layoutSidenav">
+  <div id="layoutSidenav_nav">
+      <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+          <div class="sb-sidenav-menu">
+              <div class="nav">
+                  <div class="sb-sidenav-menu-heading">Core</div>
+                  <a class="nav-link" href="/dashboard">
+                      <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                      Dashboard
+                  </a>
+                  <div class="sb-sidenav-menu-heading">Interface</div>
+
+
+
+                  <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                      <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                      Group profile
+                      <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                  </a>
+                  <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                      <nav class="sb-sidenav-menu-nested nav">
+                          <a class="nav-link" href="#">Personal info</a>
+                          <a class="nav-link" href="#">Academic info</a>
+                      </nav>
+                  </div>
+
+
+
+                   
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseGroups" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                        Members
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="pagesCollapseGroups" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                      <nav class="sb-sidenav-menu-nested nav">
+                         <a class="nav-link" href="#"></a>
+                      </nav>
+                      <nav class="sb-sidenav-menu-nested nav">
+                         <a class="nav-link" href="#"></a>
+                     </nav>
+           
+                    </div>
+
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseActivities" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                        Activities
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="pagesCollapseActivities" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                      <nav class="sb-sidenav-menu-nested nav">
+                         <a class="nav-link" href="/meeting">Meeting</a>
+                      </nav>
+                      <nav class="sb-sidenav-menu-nested nav">
+                         <a class="nav-link" href="/voting">Voting</a>
+                     </nav>
+                     <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="/screening">Screening</a>
+                     </nav>
+                     <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="/chatroom">Chatroom</a>
+                     </nav>
+                    </div>
+                  
+                  
+
+
+                      <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                          Authentication
+                          <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                      </a>
+                      <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                          
+                      </div>
+        
+             
+
+
+
+                  <div>
+                    <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                      <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"  data-bs-target=""  aria-expanded="false" aria-controls="pagesCollapseAuth">
+                          Settings
+                          <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                      </a>  
+                  </nav>
+                  </div>
+
+                  <div class="sb-sidenav-menu-heading">Rate your partners</div>
+                  <button class="btn-success" onclick="goToRating()" href="/" data-bs-toggle="collapse"  data-bs-target=""  aria-expanded="false" aria-controls="pagesCollapseAuth">
+                    Rate
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </button> 
+                  
+                  
+      
+              </div>
+          </div>
+          <div class="sb-sidenav-footer" id="student">
+              <div class="small">Logged in as:</div>
+              
+          </div>
+      </nav>
+  </div>
+  <div id="layoutSidenav_content">
+      <main>
+        <div class='chat_header'>
+            <h3>Welcome to the chatroom</h3>
+        </div>
+         <nav class = "wrapper">
+            <ul>
+             <li><a href="#">active members</a>
+                <ul>
+                   <li><a href="#">Mukz</a></li>
+                </ul>
+             </li>
+            </ul>
+        
+            </nav>
+        <div class='chatcontainer'>
+        <div class='messages' id='chats'>
+        
+        </div>
+        <div class='bottom'>
+          <form action='/chatroom/send' method="POST"  id='chatform'>
+             <input type='hidden' id='name' value=''/>
+             <input type='text' id='text1' name='text' value='' placeholder='type your message'/>
+             <input type='submit' id='submit' name='submit' value='send'/>
+        
+          </form>
+        </div>
+        
+        </div>
+
+        <div id = "apps"></div>
+        
+      </main>
+      <footer class="py-4 bg-light mt-auto">
+          <div class="container-fluid px-4">
+              <div class="d-flex align-items-center justify-content-between small">
+                  <div class="text-muted">Copyright &copy; FundaNami 2021</div>
+                  <div>
+                      <a href="#">Privacy Policy</a>
+                      &middot;
+                      <a href="#">Terms &amp; Conditions</a>
+                  </div>
+              </div>
+          </div>
+      </footer>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="js/scripts.js"></script>
+<script>
+
+    function searchFor(){
+
+        let search_word = document.getElementById('search_for').value
+        location.replace(`/results/${search_word}`)
+    }
+
+    function goToRating(){
+        const url = location.href
+        var res = url.split("/");
+        console.log(res[res.length - 1])
+        location.assign(`/rating/${res[res.length - 1]}`)
+    }
+
+</script>
+
+</body>
+</html>

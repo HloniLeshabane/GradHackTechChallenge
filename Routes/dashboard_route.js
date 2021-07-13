@@ -38,7 +38,8 @@ router.get('/', check, async (req, res) => {
     ethereum:ether_profile.Result.recordset[0].Total,
     balance_rands:ether_profile.Result.recordset[0].Total*etherToRand,
     reserved:ether_profile.Result.recordset[0].Reserved,
-    GPU:ether_profile.Result.recordset[0].GPU
+    GPU:ether_profile.Result.recordset[0].GPU,
+    available:ether_profile.Result.recordset[0].Total - ether_profile.Result.recordset[0].Reserved
 
 
   })

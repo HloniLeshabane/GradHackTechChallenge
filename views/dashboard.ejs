@@ -30,7 +30,7 @@
 
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="/dashboard">FundaNami</a>
+        <a class="navbar-brand ps-3" href="/dashboard">Investec CryptoBank</a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
                 class="fas fa-bars"></i></button>
@@ -97,7 +97,7 @@
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target=""
                                 aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Group Chats
+                                Investments
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                         </div>
@@ -106,7 +106,7 @@
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                             data-bs-target="#pagesCollapseGroups" aria-expanded="false"
                             aria-controls="pagesCollapseAuth">
-                            Groups
+                            Cryptocurrents
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
                         <div class="collapse" id="pagesCollapseGroups" aria-labelledby="headingOne"
@@ -197,7 +197,9 @@
                     </h1>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item active">Dashboard</li>
+                        <li class="breadcrumb-item active"><%= address %> </li>
                     </ol>
+                    <h2 class="mt-4"> Balance: R <%= balance_rands %>  </h2>
 
                     <div class="row">
 
@@ -214,7 +216,7 @@
                                             <div class="row align-items-center mb-2 d-flex">
                                                 <div class="col-8">
                                                     <h2 class="d-flex align-items-center mb-0">
-                                                        3,243
+                                                       <%=reserved%>
                                                     </h2>
                                                 </div>
                                                 <div class="col-4 text-right">
@@ -239,7 +241,7 @@
                                             <div class="row align-items-center mb-2 d-flex">
                                                 <div class="col-8">
                                                     <h2 class="d-flex align-items-center mb-0">
-                                                        15.07k
+                                                        <%= ethereum %> 
                                                     </h2>
                                                 </div>
                                                 <div class="col-4 text-right">
@@ -260,12 +262,12 @@
                                             <div class="card-icon card-icon-large"><i class="fas fa-ticket-alt"></i>
                                             </div>
                                             <div class="mb-4">
-                                                <h5 class="card-title mb-0">Ticket Resolved</h5>
+                                                <h5 class="card-title mb-0">GPU Resources </h5>
                                             </div>
                                             <div class="row align-items-center mb-2 d-flex">
                                                 <div class="col-8">
                                                     <h2 class="d-flex align-items-center mb-0">
-                                                        578
+                                                        <%= GPU %> 
                                                     </h2>
                                                 </div>
                                                 <div class="col-4 text-right">
@@ -286,12 +288,12 @@
                                             <div class="card-icon card-icon-large"><i class="fas fa-dollar-sign"></i>
                                             </div>
                                             <div class="mb-4">
-                                                <h5 class="card-title mb-0">Revenue Today</h5>
+                                                <h5 class="card-title mb-0">Last 3 months</h5>
                                             </div>
                                             <div class="row align-items-center mb-2 d-flex">
                                                 <div class="col-8">
                                                     <h2 class="d-flex align-items-center mb-0">
-                                                        $0.61k
+                                                        R0.61k
                                                     </h2>
                                                 </div>
                                                 <div class="col-4 text-right">

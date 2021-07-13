@@ -75,6 +75,20 @@ module.exports = {
       console.log(err)
     }
   },
+  queryEtherClient: async function(username){
+
+    try {
+      const query = `SELECT * FROM Client WHERE Username ='${username}' `
+      const result = await execute(query)
+
+      return result
+      
+    } catch (err) {
+      console.log(err)
+    }
+
+  }
+  ,
   queryGroup: async function (name) {
     try {
       const query = `SELECT * FROM Groups WHERE Name LIKE '${name}%' OR Description LIKE '%${name}%'`
